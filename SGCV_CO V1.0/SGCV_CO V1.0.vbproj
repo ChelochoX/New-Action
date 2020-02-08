@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FE225CC-7D55-4A97-AF27-0452D1E78555}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SGCV_CO_V1._0.My.MyApplication</StartupObject>
+    <RootNamespace>SGCV_CO_V1._0</RootNamespace>
+    <AssemblyName>SGCV_CO V1.0</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SGCV_CO V1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SGCV_CO V1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\store_22115.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CAJA\ANULAR RECIBOS.Designer.vb">
+      <DependentUpon>ANULAR RECIBOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\ANULAR RECIBOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\APERTURA CIERRE DE CAJA.Designer.vb">
+      <DependentUpon>APERTURA CIERRE DE CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\APERTURA CIERRE DE CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\CABECERA CLIENTE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CABECERA CLIENTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\CUENTA ACTUAL.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CUENTA ACTUAL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\CUENTA CLIENTE SINPAGADO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CUENTA CLIENTE SINPAGADO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\CUENTA CLIENTE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CUENTA CLIENTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\DETALLE MOVIMIENTO CAJA EXTENDIDO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DETALLE MOVIMIENTO CAJA EXTENDIDO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\DETALLE MOVIMIENTO CAJA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DETALLE MOVIMIENTO CAJA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\DETALLES DE CAJA.Designer.vb">
+      <DependentUpon>DETALLES DE CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\DETALLES DE CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\GESTIONAR COBRO.Designer.vb">
+      <DependentUpon>GESTIONAR COBRO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\GESTIONAR COBRO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\MOVIMIENTO EN CAJA.Designer.vb">
+      <DependentUpon>MOVIMIENTO EN CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\MOVIMIENTO EN CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\RE IMPRESION DE RECIBOS DE DINERO.Designer.vb">
+      <DependentUpon>RE IMPRESION DE RECIBOS DE DINERO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\RE IMPRESION DE RECIBOS DE DINERO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO ENTREGA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO ENTREGA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO IMPRESION DUPLICADO ENTREGA .vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO IMPRESION DUPLICADO ENTREGA .rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO IMPRESION DUPLICADO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO IMPRESION DUPLICADO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO IMPRESION ENTREGA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO IMPRESION ENTREGA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO IMPRESION.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO IMPRESION.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RECIBO DE DINERO_.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBO DE DINERO_.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\RENDICION DE CAJA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RENDICION DE CAJA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\REPORTE DE RECIBO DE DINERO.Designer.vb">
+      <DependentUpon>REPORTE DE RECIBO DE DINERO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\REPORTE DE RECIBO DE DINERO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\REPORTE PAGARE A LA ORDEN CON GARANTE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE PAGARE A LA ORDEN CON GARANTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\REPORTE PAGARE A LA ORDEN.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE PAGARE A LA ORDEN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\REPORTE RECIBOS DE PAGO POR FECHA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE RECIBOS DE PAGO POR FECHA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CAJA\REPORTE RENDICION CAJA.Designer.vb">
+      <DependentUpon>REPORTE RENDICION CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\REPORTE RENDICION CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\VER DOCUMENTO FACTURACION.Designer.vb">
+      <DependentUpon>VER DOCUMENTO FACTURACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\VER DOCUMENTO FACTURACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAJA\VISUALIZAR CUENTA CLIENTE.Designer.vb">
+      <DependentUpon>VISUALIZAR CUENTA CLIENTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAJA\VISUALIZAR CUENTA CLIENTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\DATOS GARANTE.Designer.vb">
+      <DependentUpon>DATOS GARANTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\DATOS GARANTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\LISTAR POR CEDULA CLIENTE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LISTAR POR CEDULA CLIENTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\LISTAR POR FECHA DE REGISTRO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LISTAR POR FECHA DE REGISTRO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\LISTAR POR NOMBRE CLIENTE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LISTAR POR NOMBRE CLIENTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\REGISTRO CLIENTE.designer.vb">
+      <DependentUpon>REGISTRO CLIENTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\REGISTRO CLIENTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\REPORTE CLIENTES.Designer.vb">
+      <DependentUpon>REPORTE CLIENTES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\REPORTE CLIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE CLIENTES CON ATRASO.Designer.vb">
+      <DependentUpon>REPORTE CLIENTES CON ATRASO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE CLIENTES CON ATRASO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE SEGUIMIENTO COBRANZA POR CEDULA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE SEGUIMIENTO COBRANZA POR CEDULA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE SEGUIMIENTO COBRANZA POR RANGO FECHA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE SEGUIMIENTO COBRANZA POR RANGO FECHA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE SEGUIMIENTO DE COBRANZA.Designer.vb">
+      <DependentUpon>REPORTE SEGUIMIENTO DE COBRANZA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COBRANZA\REPORTE SEGUIMIENTO DE COBRANZA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COBRANZA\SEGUIMIENTO COBRANZA.Designer.vb">
+      <DependentUpon>SEGUIMIENTO COBRANZA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COBRANZA\SEGUIMIENTO COBRANZA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPRAS\COMPRAS DE PROVEEDOR.designer.vb">
+      <DependentUpon>COMPRAS DE PROVEEDOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COMPRAS\COMPRAS DE PROVEEDOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPRAS\RECEPCIO COMPRAS.designer.vb">
+      <DependentUpon>RECEPCIO COMPRAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="COMPRAS\RECEPCIO COMPRAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONFIGURACION\CONEXION.vb" />
+    <Compile Include="CONFIGURACION\PROCESOS GLOBALES.vb" />
+    <Compile Include="CONFIGURACION\PUNTO DE MILES.vb" />
+    <Compile Include="CONFIGURACION\VARIABLES GLOBALES.vb" />
+    <Compile Include="DEPOSITO\GESTIONAR TRASLADO DE PRODUCTOS.Designer.vb">
+      <DependentUpon>GESTIONAR TRASLADO DE PRODUCTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSITO\GESTIONAR TRASLADO DE PRODUCTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\STOCK POR CADA DEPOSITO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STOCK POR CADA DEPOSITO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\STOCK POR NOMBRE USADOS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STOCK POR NOMBRE USADOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\STOCK POR NOMBRE.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STOCK POR NOMBRE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\STOCK POR VALORIZACION.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STOCK POR VALORIZACION.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\TRASLADO DE MERCADERIAS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TRASLADO DE MERCADERIAS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\VER PRODUCTOS EN STOCK.Designer.vb">
+      <DependentUpon>VER PRODUCTOS EN STOCK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSITO\VER PRODUCTOS EN STOCK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO\VISUALIZAR STOCK EN DEPOSITO.Designer.vb">
+      <DependentUpon>VISUALIZAR STOCK EN DEPOSITO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSITO\VISUALIZAR STOCK EN DEPOSITO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMES\ESTADISTICA DEUDA PAGO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESTADISTICA DEUDA PAGO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="INFORMES\ESTADISTICAS CUENTAS POR COBRAR.Designer.vb">
+      <DependentUpon>ESTADISTICAS CUENTAS POR COBRAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMES\ESTADISTICAS CUENTAS POR COBRAR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMES\ROTACION DE MERCADERIAS.Designer.vb">
+      <DependentUpon>ROTACION DE MERCADERIAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMES\ROTACION DE MERCADERIAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMES\ROTACION MERCADERIAS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ROTACION MERCADERIAS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="INFORMES\soporte.Designer.vb">
+      <DependentUpon>soporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMES\soporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMES\UTILIDAD COMPRA VS VENTA.Designer.vb">
+      <DependentUpon>UTILIDAD COMPRA VS VENTA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMES\UTILIDAD COMPRA VS VENTA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMES\UTILIDAD COMPRASVSVENTAS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UTILIDAD COMPRASVSVENTAS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logeo de Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU PRINCIPAL.Designer.vb">
+      <DependentUpon>MENU PRINCIPAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MENU PRINCIPAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PRODUCTOS\ASIGNAR IMAGEN A LOS PRODUCTOS.Designer.vb">
+      <DependentUpon>ASIGNAR IMAGEN A LOS PRODUCTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\ASIGNAR IMAGEN A LOS PRODUCTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\GESTIONAR PRECIO PRODUCTOS.designer.vb">
+      <DependentUpon>GESTIONAR PRECIO PRODUCTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\GESTIONAR PRECIO PRODUCTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS\REGISTRO PRODUCTOS.designer.vb">
+      <DependentUpon>REGISTRO PRODUCTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS\REGISTRO PRODUCTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PROVEEDORES\REGISTRO PROVEEDOR.designer.vb">
+      <DependentUpon>REGISTRO PROVEEDOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PROVEEDORES\REGISTRO PROVEEDOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\AGREGAR USUARIOS.Designer.vb">
+      <DependentUpon>AGREGAR USUARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\AGREGAR USUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\EMPRESA.Designer.vb">
+      <DependentUpon>EMPRESA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\EMPRESA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\FACTURACIONES SON DOCUMENTOS.Designer.vb">
+      <DependentUpon>FACTURACIONES SON DOCUMENTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\FACTURACIONES SON DOCUMENTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\GESTIONAR INTERES PARA CREDITO.Designer.vb">
+      <DependentUpon>GESTIONAR INTERES PARA CREDITO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\GESTIONAR INTERES PARA CREDITO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\REPORTE CUENTA CLIENTES ANULADOS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE CUENTA CLIENTES ANULADOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ROLES\REPORTE DE CUENTA CLIENTE ANULADOS.Designer.vb">
+      <DependentUpon>REPORTE DE CUENTA CLIENTE ANULADOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\REPORTE DE CUENTA CLIENTE ANULADOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\ROLES DE USUARIO.Designer.vb">
+      <DependentUpon>ROLES DE USUARIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\ROLES DE USUARIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\TIMBRADO DOCUMENTOS.Designer.vb">
+      <DependentUpon>TIMBRADO DOCUMENTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROLES\TIMBRADO DOCUMENTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROLES\VER_EMPRESA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VER_EMPRESA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\ANULAR FACTURACION.designer.vb">
+      <DependentUpon>ANULAR FACTURACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\ANULAR FACTURACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\FACTURACION.designer.vb">
+      <DependentUpon>FACTURACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\FACTURACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\RE IMPRESION DE FACTURACIONES.Designer.vb">
+      <DependentUpon>RE IMPRESION DE FACTURACIONES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\RE IMPRESION DE FACTURACIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\REPORTE FACTURA CONTADO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE FACTURA CONTADO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\REPORTE FACTURA CREDITO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE FACTURA CREDITO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\REPORTE FACTURA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE FACTURA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\REPORTE FACTURACIONES POR FECHA.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE FACTURACIONES POR FECHA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\REPORTE TICKET.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTE TICKET.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTAS\VER DOCUMENTOS ANULADOS.Designer.vb">
+      <DependentUpon>VER DOCUMENTOS ANULADOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\VER DOCUMENTOS ANULADOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\VISUALIZAR FACTURACIONES.Designer.vb">
+      <DependentUpon>VISUALIZAR FACTURACIONES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\VISUALIZAR FACTURACIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CAJA\ANULAR RECIBOS.resx">
+      <DependentUpon>ANULAR RECIBOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\APERTURA CIERRE DE CAJA.resx">
+      <DependentUpon>APERTURA CIERRE DE CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\CABECERA CLIENTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CABECERA CLIENTE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\CUENTA ACTUAL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CUENTA ACTUAL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\CUENTA CLIENTE SINPAGADO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CUENTA CLIENTE SINPAGADO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\CUENTA CLIENTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CUENTA CLIENTE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\DETALLE MOVIMIENTO CAJA EXTENDIDO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DETALLE MOVIMIENTO CAJA EXTENDIDO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\DETALLE MOVIMIENTO CAJA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DETALLE MOVIMIENTO CAJA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\DETALLES DE CAJA.resx">
+      <DependentUpon>DETALLES DE CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\GESTIONAR COBRO.resx">
+      <DependentUpon>GESTIONAR COBRO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\MOVIMIENTO EN CAJA.resx">
+      <DependentUpon>MOVIMIENTO EN CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RE IMPRESION DE RECIBOS DE DINERO.resx">
+      <DependentUpon>RE IMPRESION DE RECIBOS DE DINERO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO ENTREGA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO ENTREGA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO IMPRESION DUPLICADO ENTREGA .rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO IMPRESION DUPLICADO ENTREGA .vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO IMPRESION DUPLICADO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO IMPRESION DUPLICADO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO IMPRESION ENTREGA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO IMPRESION ENTREGA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO IMPRESION.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO IMPRESION.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RECIBO DE DINERO_.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBO DE DINERO_.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\RENDICION DE CAJA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RENDICION DE CAJA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\REPORTE DE RECIBO DE DINERO.resx">
+      <DependentUpon>REPORTE DE RECIBO DE DINERO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\REPORTE PAGARE A LA ORDEN CON GARANTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE PAGARE A LA ORDEN CON GARANTE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\REPORTE PAGARE A LA ORDEN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE PAGARE A LA ORDEN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\REPORTE RECIBOS DE PAGO POR FECHA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE RECIBOS DE PAGO POR FECHA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\REPORTE RENDICION CAJA.resx">
+      <DependentUpon>REPORTE RENDICION CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\VER DOCUMENTO FACTURACION.resx">
+      <DependentUpon>VER DOCUMENTO FACTURACION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAJA\VISUALIZAR CUENTA CLIENTE.resx">
+      <DependentUpon>VISUALIZAR CUENTA CLIENTE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\DATOS GARANTE.resx">
+      <DependentUpon>DATOS GARANTE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\LISTAR POR CEDULA CLIENTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LISTAR POR CEDULA CLIENTE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\LISTAR POR FECHA DE REGISTRO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LISTAR POR FECHA DE REGISTRO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\LISTAR POR NOMBRE CLIENTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LISTAR POR NOMBRE CLIENTE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\REGISTRO CLIENTE.resx">
+      <DependentUpon>REGISTRO CLIENTE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\REPORTE CLIENTES.resx">
+      <DependentUpon>REPORTE CLIENTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COBRANZA\REPORTE CLIENTES CON ATRASO.resx">
+      <DependentUpon>REPORTE CLIENTES CON ATRASO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COBRANZA\REPORTE SEGUIMIENTO COBRANZA POR CEDULA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE SEGUIMIENTO COBRANZA POR CEDULA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COBRANZA\REPORTE SEGUIMIENTO COBRANZA POR RANGO FECHA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE SEGUIMIENTO COBRANZA POR RANGO FECHA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COBRANZA\REPORTE SEGUIMIENTO DE COBRANZA.resx">
+      <DependentUpon>REPORTE SEGUIMIENTO DE COBRANZA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COBRANZA\SEGUIMIENTO COBRANZA.resx">
+      <DependentUpon>SEGUIMIENTO COBRANZA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPRAS\COMPRAS DE PROVEEDOR.resx">
+      <DependentUpon>COMPRAS DE PROVEEDOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPRAS\RECEPCIO COMPRAS.resx">
+      <DependentUpon>RECEPCIO COMPRAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\GESTIONAR TRASLADO DE PRODUCTOS.resx">
+      <DependentUpon>GESTIONAR TRASLADO DE PRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\STOCK POR CADA DEPOSITO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>STOCK POR CADA DEPOSITO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\STOCK POR NOMBRE USADOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>STOCK POR NOMBRE USADOS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\STOCK POR NOMBRE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>STOCK POR NOMBRE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\STOCK POR VALORIZACION.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>STOCK POR VALORIZACION.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\TRASLADO DE MERCADERIAS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TRASLADO DE MERCADERIAS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\VER PRODUCTOS EN STOCK.resx">
+      <DependentUpon>VER PRODUCTOS EN STOCK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO\VISUALIZAR STOCK EN DEPOSITO.resx">
+      <DependentUpon>VISUALIZAR STOCK EN DEPOSITO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\ESTADISTICA DEUDA PAGO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ESTADISTICA DEUDA PAGO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\ESTADISTICAS CUENTAS POR COBRAR.resx">
+      <DependentUpon>ESTADISTICAS CUENTAS POR COBRAR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\ROTACION DE MERCADERIAS.resx">
+      <DependentUpon>ROTACION DE MERCADERIAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\ROTACION MERCADERIAS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ROTACION MERCADERIAS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\soporte.resx">
+      <DependentUpon>soporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\UTILIDAD COMPRA VS VENTA.resx">
+      <DependentUpon>UTILIDAD COMPRA VS VENTA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMES\UTILIDAD COMPRASVSVENTAS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UTILIDAD COMPRASVSVENTAS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logeo de Usuario.resx">
+      <DependentUpon>Logeo de Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU PRINCIPAL.resx">
+      <DependentUpon>MENU PRINCIPAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\ASIGNAR IMAGEN A LOS PRODUCTOS.resx">
+      <DependentUpon>ASIGNAR IMAGEN A LOS PRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\GESTIONAR PRECIO PRODUCTOS.resx">
+      <DependentUpon>GESTIONAR PRECIO PRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS\REGISTRO PRODUCTOS.resx">
+      <DependentUpon>REGISTRO PRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PROVEEDORES\REGISTRO PROVEEDOR.resx">
+      <DependentUpon>REGISTRO PROVEEDOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\AGREGAR USUARIOS.resx">
+      <DependentUpon>AGREGAR USUARIOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\EMPRESA.resx">
+      <DependentUpon>EMPRESA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\FACTURACIONES SON DOCUMENTOS.resx">
+      <DependentUpon>FACTURACIONES SON DOCUMENTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\GESTIONAR INTERES PARA CREDITO.resx">
+      <DependentUpon>GESTIONAR INTERES PARA CREDITO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\REPORTE CUENTA CLIENTES ANULADOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE CUENTA CLIENTES ANULADOS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\REPORTE DE CUENTA CLIENTE ANULADOS.resx">
+      <DependentUpon>REPORTE DE CUENTA CLIENTE ANULADOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\ROLES DE USUARIO.resx">
+      <DependentUpon>ROLES DE USUARIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\TIMBRADO DOCUMENTOS.resx">
+      <DependentUpon>TIMBRADO DOCUMENTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROLES\VER_EMPRESA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VER_EMPRESA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\ANULAR FACTURACION.resx">
+      <DependentUpon>ANULAR FACTURACION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\FACTURACION.resx">
+      <DependentUpon>FACTURACION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\RE IMPRESION DE FACTURACIONES.resx">
+      <DependentUpon>RE IMPRESION DE FACTURACIONES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\REPORTE FACTURA CONTADO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE FACTURA CONTADO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\REPORTE FACTURA CREDITO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE FACTURA CREDITO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\REPORTE FACTURA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE FACTURA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\REPORTE FACTURACIONES POR FECHA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE FACTURACIONES POR FECHA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\REPORTE TICKET.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTE TICKET.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\VER DOCUMENTOS ANULADOS.resx">
+      <DependentUpon>VER DOCUMENTOS ANULADOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\VISUALIZAR FACTURACIONES.resx">
+      <DependentUpon>VISUALIZAR FACTURACIONES.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top 10 Winter Destinations %281%29.png" />
+    <None Include="Resources\A life without love is like a year without summer..png" />
+    <None Include="Resources\Dare to Travel!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Isaías 54_2-3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-producto-nuevo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-proveedor-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tienda-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cesta-de-la-compra-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tarea-completada-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-estimar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-asistente-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lista-de-quehaceres-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trabajo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bloquear-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-atención-al-cliente-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gestión-de-clientes-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reporte-de-negocios-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comprobado-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mejoras-económicas-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-foto-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-entrega-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comprar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verificar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-solicitud-de-dinero-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-imprimir-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-descargo-de-responsabilidad-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-noticias-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-monedas-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-flujo-de-fondos-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-deuda-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-presupuesto-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contabilidad-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-archivo-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-archivo-48 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-colaboración-hombre-mujer-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-agregar-grupo-de-usuarios-mujer-hombre-tipo-de-piel-7-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-usuario-masculino-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-contacto-a-empresa-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documento-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-estructura-de-precios-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-colaboración-hombre-mujer-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-datos-salientes-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-datos-de-entrada-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\store_22115.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

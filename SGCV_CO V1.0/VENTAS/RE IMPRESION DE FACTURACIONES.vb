@@ -1,0 +1,179 @@
+﻿
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+Imports System.Data.SqlClient
+Imports System
+Imports System.IO
+Imports System.Diagnostics
+
+Public Class RE_IMPRESION_DE_FACTURACIONES
+
+    Dim busqueda As Integer
+    Dim FECHA_INICIAL, FECHA_FINAL As Date
+    Dim DaFactura, DaFactura1, DaStock, DaDetalle As New SqlClient.SqlDataAdapter
+    Dim DsFactura, DsStock, DsDetalle As New Data.DataSet
+    Dim valor As String
+    Dim SUMARECIBO_TOTAL_DETMOVCAJA, SUMAFACTURA_TOTAL_DETMOVCAJA, paraCODCAJA, MONTO_APERTURA As Integer
+    Dim deposito_, cod_factura As Integer
+    Dim deposito As String
+
+    Sub SetDBLogonForReport(ByVal myConnectionInfo As ConnectionInfo, ByVal myReportDocument As ReportDocument)
+        Dim myTables As Tables = myReportDocument.Database.Tables
+        For Each myTable As CrystalDecisions.CrystalReports.Engine.Table In myTables
+            Dim myTableLogonInfo As TableLogOnInfo = myTable.LogOnInfo
+            myTableLogonInfo.ConnectionInfo = myConnectionInfo
+            myTable.ApplyLogOnInfo(myTableLogonInfo)
+        Next
+    End Sub
+
+    Private Sub RE_IMPRESION_DE_FACTURACIONES_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        ' Cargar_Datos()
+
+        iconexion.DatabaseName = bbdd
+        iconexion.UserID = usuario_
+        iconexion.Password = contrasena_
+        iconexion.ServerName = servidor
+        iconexion.Type = ConnectionInfoType.SQL
+
+    End Sub
+
+    Private Sub btnBuscar_Facturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar_Facturacion.Click
+        Try
+            conectar()
+            SQLconexion.Open()
+            Dim sel As String
+            sel = "SELECT * FROM VF_CABECERA_FACTURA WHERE FECHA BETWEEN '" & FECHA_INICIAL & "' AND '" & FECHA_FINAL & "'"
+            cmm = New SqlClient.SqlCommand(sel, SQLconexion)
+            'crear adapter
+            DaFactura1 = New SqlClient.SqlDataAdapter(cmm)
+            'crear dataset
+            Dim dt1 As New DataTable("VF_CABECERA_FACTURA")
+            DaFactura1.Fill(dt1)
+            SQLconexion.Close()
+            With ltsDetallesBusqueda
+                .DataSource = dt1
+                .DisplayMember = "DOCUMENTO"
+                .ValueMember = "NUMERO_FACTURA"
+                .Refresh()
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message())
+            SQLconexion.Close()
+        End Try
+    End Sub
+
+    Private Sub DateTimePicker1_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateTimePicker1.Leave
+        Dim fecha1 As Date
+        fecha1 = Me.DateTimePicker1.Value.Date.AddDays(0)
+        FECHA_INICIAL = fecha1
+    End Sub
+
+    Private Sub DateTimePicker2_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles DateTimePicker2.Leave
+        Dim fecha1 As Date
+        fecha1 = Me.DateTimePicker2.Value.Date.AddDays(1)
+        FECHA_FINAL = fecha1
+    End Sub
+
+    Function BUSQUEDA_IDENTIFICADOR(ByVal A As String) As String
+        Try
+            conectar()
+            Dim sel As String
+            sel = "SELECT IDENTIFICADOR FROM VF_CABECERA_FACTURA WHERE NUMERO_FACTURA = '" & A & "'"
+            cmm = New SqlClient.SqlCommand(sel, SQLconexion)
+            SQLconexion.Open()
+            Dim t As String = CStr(cmm.ExecuteScalar())
+            cmm.Dispose()
+            SQLconexion.Close()
+
+            Return t
+        Catch ex As Exception
+            MsgBox(ex.Message())
+        End Try
+
+    End Function
+
+    Private Sub ltsDetallesBusqueda_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ltsDetallesBusqueda.Click
+
+        valor = Trim(Me.ltsDetallesBusqueda.Text)
+        'deposito_ = paraDeposito(valor)
+        IDENTIFICADOR2 = BUSQUEDA_IDENTIFICADOR(valor)
+        'cod_factura = paraCodigoFactura(valor)
+
+        If IDENTIFICADOR2 = "T" Then
+            Try
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter("REPORTE_FACTURACION_FACTURA", SQLconexion)
+                da.SelectCommand.CommandType = CommandType.StoredProcedure
+                da.SelectCommand.Parameters.AddWithValue("@NUMERO_FACTURA", valor)
+                da.Fill(dt)
+
+                Dim ds As New Data.DataSet
+                ds.Tables.Add(dt)
+
+                Dim info As New REPORTE_TICKET
+                info.SetDataSource(ds)
+                info.SetParameterValue("@NUMERO_FACTURA", valor)
+                SetDBLogonForReport(iconexion, info)
+                Me.CrystalReportViewer1.ReportSource = info
+
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString)
+                SQLconexion.Close()
+            End Try
+        Else
+            If IDENTIFICADOR2 = "F" Then
+                Try
+                    Dim dt As New DataTable
+                    Dim da As New SqlDataAdapter("REPORTE_FACTURACION_FACTURA", SQLconexion)
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure
+                    da.SelectCommand.Parameters.AddWithValue("@NUMERO_FACTURA", valor)
+                    da.Fill(dt)
+
+                    Dim ds As New Data.DataSet
+                    ds.Tables.Add(dt)
+
+                    Dim info As New REPORTE_FACTURA
+                    info.SetDataSource(ds)
+                    info.SetParameterValue("@NUMERO_FACTURA", valor)
+                    SetDBLogonForReport(iconexion, info)
+                    Me.CrystalReportViewer1.ReportSource = info
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
+                    SQLconexion.Close()
+                End Try
+            End If
+        End If
+    End Sub
+
+    Private Sub btnLimpiarBusqueda_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiarBusqueda.Click
+        Try
+            conectar()
+            SQLconexion.Open()
+            Dim sel As String
+            sel = "SELECT * FROM VF_CABECERA_FACTURA WHERE COD_FACTURA = " & 0 & ""
+            cmm = New SqlClient.SqlCommand(sel, SQLconexion)
+            'crear adapter
+            DaFactura1 = New SqlClient.SqlDataAdapter(cmm)
+            'crear dataset
+            Dim dt1 As New DataTable("VF_CABECERA_FACTURA")
+            DaFactura1.Fill(dt1)
+            SQLconexion.Close()
+            With ltsDetallesBusqueda
+                .DataSource = dt1
+                .DisplayMember = "DOCUMENTO"
+                .ValueMember = "NUMERO_FACTURA"
+                .Refresh()
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message())
+            SQLconexion.Close()
+        End Try
+        Me.CrystalReportViewer1.ReportSource = Nothing
+    End Sub
+
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+        Me.Close()
+    End Sub
+End Class
